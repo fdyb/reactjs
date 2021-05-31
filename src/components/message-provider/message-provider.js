@@ -58,27 +58,27 @@ export class MessageProvider extends React.Component {
     })
   }
 
-  componentDidUpdate(_, prevState) {
-    const {
-      match: { params },
-    } = this.props
-    const { messages } = this.state
+  // componentDidUpdate(_, prevState) {
+  //   const {
+  //     match: { params },
+  //   } = this.props
+  //   const { messages } = this.state
 
-    if (!params.roomId) {
-      return
-    }
+  //   if (!params.roomId) {
+  //     return
+  //   }
 
-    const currentMessages = messages[params.roomId]
-    const prevMessages = prevState.messages[params.roomId]
+  //   const currentMessages = messages[params.roomId]
+  //   const prevMessages = prevState.messages[params.roomId]
 
-    const lastMessage = currentMessages[currentMessages.length - 1]
+  //   const lastMessage = currentMessages[currentMessages.length - 1]
 
-    if (lastMessage?.author !== "Bot" && currentMessages !== prevMessages) {
-      setTimeout(() => {
-        this.sendMessage({ author: "Bot", message: "Как дела ?" })
-      }, 500)
-    }
-  }
+  //   if (lastMessage?.author !== "Bot" && currentMessages !== prevMessages) {
+  //     setTimeout(() => {
+  //       this.sendMessage({ author: "Bot", message: "Как дела ?" })
+  //     }, 500)
+  //   }
+  // }
 
   render() {
     const { children, match } = this.props

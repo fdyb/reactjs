@@ -1,0 +1,1 @@
+export const TOGGLE_SHOW_NAME = "@profile / toggle show name";
