@@ -1,3 +1,15 @@
 .header {
   height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 7px;
+  align-items: center;
+}
+
+.profile__link {
+  text-decoration: none !important;
+  display: inline-block;
+  color: #fff !important;
+  padding: 7px 13px;
+  border: 1px solid #c3c3c3;
 }
