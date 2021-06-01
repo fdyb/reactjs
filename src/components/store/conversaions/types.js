@@ -1,0 +1,1 @@
+export const CHANGE_VALUE = "@chats/change_value";
